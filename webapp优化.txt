@@ -1,0 +1,58 @@
+【图片优化】
+1、预加载
+ ① 显性加载 显示loading...
+ ② 隐形加载 显示第一张图时预先加载第二张loading
+
+2、 按需加载 先加载首屏，首屏之外的元素出现在首屏时才加载
+    响应式加载 利用js或css判断分辨率 来选择不同尺寸的图片引入
+
+3、压缩图片
+ ① 使用大尺寸大有损压缩比的jpg
+ ② 使用jpegtran进行无损压缩
+ ③ png图片：多彩图片使用png24,低彩图片使用png8,推荐使用pngquant
+
+4、避免重定向
+
+5、使用其他方式代替图片
+ ① css3绘制图片
+ ② 使用iconfont代替图片(只支持单色图标) [但iconfont不一定比雪碧图片好,小尺寸图标才使用iconfont]
+
+【脚本优化】
+1、脚本尽量避免DataURI
+   移动端会比外链资源慢6倍 尽量用雪碧图和缓存技术
+
+2、点击事件优化
+   使用touchstart,touchend,touch事件代替延迟比较大的click [click慢300ms 是因为mousedown导致]
+
+【动画优化】
+1、尽量使用css3：不占用js主线程，可利用硬件加速，浏览器对动画优化
+   适当使用canvas动画：渲染更快  （5个元素以内使用css3动画，5个以上使用canvas动画）   
+   合理使用RAF(requestAnimationFrame) 缓动函数 (兼容android 4.3使用setTimeout)
+
+2、高频事件 touchmove,scroll 导致多次渲染：
+ ① 使用RAF监听帧变化，使其正确时间进行渲染
+ ② 增加相应变化的时间间隔，减少重绘次数
+
+【缓存】
+1、如果使用jquery,则可换成zepto
+2、post方式是比get慢
+3、首屏加载，其他lazyload
+4、减少使用定位属性（fixed/absolute），定位元素会使UI渲染失效
+
+【弹性布局】
+注意：viewport和media Query在iOS和Android上识别的单位不同，在 iOS 上识别的是“设备像素”，而在 Android 上识别的是“CSS像素”
+解决：if(Android){
+        //使用zoom 全局缩放
+      }else if(IOS){
+        //使用meta viewport进行缩放
+      }
+
+【切图】
+1、iphone3s 最小的分辨率是320x480，使用1x图
+   iphone4或4s 640x960
+   iphone5或5s 640x1136
+   iphone6和iphone 6plus
+   iPad 1536x2048
+   所有可点击的部件需大于88px*88px
+   所有图形部件尺寸必须为偶数；所有字体使用偶数字号
+   Android里面开发用的尺寸单位是dp或sp（dp为元素表现尺寸，sp为字体尺寸）而不是iphone中的px

@@ -1,0 +1,81 @@
+模块管理：require.js、AMD模块规范、CMD、PMD、KMD、MVVM（web Component组件标准）
+grunt
+
+angularjs
+npm
+yeoman
+……
+前端调试技术
+jshint:js代码检测工具
+webstorm:js开发工具（类似：sublime/vim）
+SourceMap文件：js压缩文件 信息文件
+代码检查、打包、压缩等部署工作
+单元测试
+jpegtran：图片优化工具
+pngquant：png压缩工具
+webview
+websocket实时互动小游戏
+zepto
+reflow
+bootstrap模板
+
+前端到底学写什么——
+css框架：Less、Sass、Stylus、Absurd
+js框架：jquery、zepto、kissy、angularJS和emberJS是MVVM、backboneJS是MVC、requireJS
+
+代码质量：jasmine、qunit、mocha 单元测试
+浏览器测试：karma
+部署：travis CI
+用户行为测试：selenium
+样式测试：viff
+js转译：coffeescript
+
+动画：css3、canvas(游戏开发)、svg(snap.svg)
+动画框架：createJS
+3D：three.js用webGL开发3D,asm.js
+
+配置部署：grunt
+库管理：bower
+项目：yeoman
+github
+Git
+Jekyll托管博客
+
+html5离线应用
+phoneGap
+后端：Node.js,npm管理node包
+
+模块化：commonJS和AMD规范
+
+
+
+(以下均为windows平台)
+开发环境：
+【nodejs】 自动化高效率的开发环境
+nodejs必备工具【npm】
+npm安装包：npm install <package name>
+【Msys】GNU工具集 包含bash,make,gawk,grep
+【Git】有了Msysgit即可直接安装
+【编辑器】Vim、Emacs、SublimeText、Webstorm
+【浏览器】chrome、firefox、phanttomjs（基于WebKit的服务器端 JavaScript API  测试和研究）
+
+自动化开发：
+【Yeoman】工作流工具集。
+【yo】 项目初始化工具(安装generator)
+【bower】 类似于npm的包管理器 从github查找库下载到本地缓存
+【grunt】自动化开发。文件基本操作、测试、编译、压缩、代码检查等插件
+
+开发工具：
+【SublimeText】
+【chrome】
+【cssGaga】自动合并css,生成雪碧图，生成兼容reina的代码，同步资源，生成提单列表等
+性能测试工具？？
+调试工具？？
+代理工具？？
+css工具？？
+
+代码管理：
+【Git】
+【GitHub】
+
+

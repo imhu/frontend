@@ -1,0 +1,7 @@
+全屏免打扰模式：F11 和 Shift+F11 
+安装插件：ctrl+shift+p——package control:install package——搜索插件
+常用插件：
+Gits:继承github
+emmet:快速编码
+convertToUTF8:转换gbk
+YUI Compressor:压缩js和css文件

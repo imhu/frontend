@@ -1,0 +1,4 @@
+1、nodejs.org 下载安装
+2、执行nodejs command prompt；输入命令node -v；显示版本号表示node安装成功；默认安装了nodejs包管理工具npm；通过npm命令即可安装/卸载/更新包了
+3、npm命令：
+ ① npm install **  安装

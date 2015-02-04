@@ -1,0 +1,80 @@
+关于调试：
+
+【pc端调试】
+1、javascript调试
+ ① debugger设置断点；然后打开浏览器console面板；f10逐语句调试
+    if(***){debugger}
+
+2、chrome DevTools 调试
+ ① Elements面板
+    右键标签元素 增(add)改(edit)删(Delete)移(选中拖动)操作
+    右键标签元素 "Force element state" 强制设置标签状态 active hover focus visited  
+    右键标签元素 "Break on..." 添加断点 subtree(子节点结构改变时) Attributes(元素属性改变时) Node(元素被删除时)
+    选中元素 修改css数值：上下方向键以1为单位加减；按shift+方向键以10为单位加减
+
+ ② Newwork面板
+
+ ③ Source面板 命令
+    ctrl+o 打开一个js文件
+    ctrl+p 同ctrl+o
+    ctrl+f 查找当前js文件中的关键字
+    ctrl+shift+f 全局查找关键字
+    ctrl+shift+e 在控制台运行当前选中的代码片段 
+    
+    点击 创建断点
+    还可创建条件断点 右键断点标记 选择"edit breakpoint..."
+   
+    点击{} 可格式化压缩的css和js文件    
+    用 SourceMap 调试 ？？如何生成sourcemap文件
+    setting——General——Source——Enable JavaScript source maps
+    然后在source面板即可解析sourcemap压缩的js文件
+
+ ④ TimeLine
+
+ ⑤ Profiles
+
+ ⑥ Resources
+
+ ⑦ Audits
+
+ ⑧ console[控制台换行 shift+Enter]
+    console.log()
+    console.trace() 与log区别：展开输出对象
+    console.time（）显示代码执行的时间 搭配console.timeEnd使用 如console.time('use');/* 代码段*/ console.timeEnd('use');注意括号中文字一致，否则无效
+    console.clear() 清空控制台
+    $0 输出Elements面板中选中的dom元素    
+    等等
+
+ ⑨ settings——Workspace 设置folders 可直接修改保存本地文件
+
+ ⑨ Chrome DevTools插件
+    jQuery Audit 查看页面节点的jQuery属性和数据
+    jQuery Debugger 调试jQuery ？？与jQuery Audit的区别是什么
+    JS Runtime Inspector 通过关键词来搜索页面上JavaScript对象
+    Devtools redirect  给页面上的网络连接重定位(类似fiddler替换文件)
+    Grunt DevTools 运行和查看Grunt任务
+    Angular Batarang 开发和调试Angular
+
+3、FireFox FireBug调试
+
+4、远程映射本地调试(如 fiddler抓包工具)
+   将远程的文件代理到本地来实现远程映射调试
+
+5、XHR断点或Ajax断点 ？？
+
+
+
+【移动端调试】
+1、 pc远程映射本地调试（参考网址：http://segmentfault.com/blog/lolomaco/1190000002529089）
+ tips:手机和pc在同一网络
+ ① 设置手机wifi的代理（主机名为pc端ip地址 端口建议填3000以上 即可 pc端ip地址通过命令窗口ipconfig获取）
+ ② 打开fiddler抓包工具——Tools——Fiddler Options...——（设置远程）Allow Remote Computers to Connert、端口与①一致
+ ③ 手机浏览器打开网址
+ ④ 查看fiddler  剩下的就是fiddler里操作了
+
+2、Weinre移动调试
+   npm安装
+
+3、云集 一款app
+
+
